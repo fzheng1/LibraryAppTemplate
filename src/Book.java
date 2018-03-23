@@ -1,36 +1,19 @@
-/**
- * Book class
- */
-public class Book {
+class Book {
+    String title;
+    String author;
+    String[] pages;
+
+    public String toString() {
+        String pagesString = "";
+        for (String page:pages) {
+            pagesString += page + " ";
+        }
+        return pagesString;
+    }
+
+    public String censorPage(int page) {
+        return(pages[page] = "-");
 
 
-    /**
-     * censorPage(int) : void
-     * Will replace the contents of any given pageNumber with a hyphen "-", thereby
-     * 'censoring' its contents from being viewed.
-     *
-     * @param pageNumber
-     *          The index of the page to be 'censored'
-     *
-     */
-
-
-
-
-
-
-
-    /**
-     * toString() : String
-     * Returns all this.pages values as one long string.
-     *
-     * @return
-     *          String of all page contents together.
-     *          E.g. if this.pages = { "a", "b", "c" };
-     *          the method returns "abc".
-     */
-
-
-
-
+    }
 }
